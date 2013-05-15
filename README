@@ -1,0 +1,4 @@
+PNP is a program for tutorial purposes in the signal processing area.
+It allows to set, move and remove poles and zeros of an one dimensional digital
+filter.
+The program shows different effects of the filter in the frequency domain.
