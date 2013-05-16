@@ -50,8 +50,8 @@ public class About
 		final String[] text = {
 			"PNP for Java " + PNP.Version,
 			"--",
-			"Copyright (C) 2001 by Ralf Thomas Pietsch",
-			"<pietsch@iap.uni-frankfurt.de>",
+			"Copyright (C) 2001-2013 by Ralf Thomas Pietsch",
+			"<ratopi@sourceforge.net>",
 			"--",
 			"This program is free software; you can redistribute it and/or modify",
 			"it under the terms of the GNU General Public License as published by",
