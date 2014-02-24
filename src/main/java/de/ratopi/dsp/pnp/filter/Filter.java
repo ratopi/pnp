@@ -165,7 +165,7 @@ public class Filter
 		throws IOException
 	{
 		int n;
-		char cbuf[] = new char[1024];
+		char[] cbuf = new char[1024];
 		StringBuffer str = new StringBuffer();
 
 		while ( (n = r.read( cbuf )) >= 0 )
@@ -241,7 +241,7 @@ public class Filter
 
 	public double[] amplitudeLin( int len )
 	{
-		final double buf[] = new double[len];
+		final double[] buf = new double[len];
 
 		for ( int i = 0; i < len; i++ )
 		{
@@ -298,7 +298,7 @@ public class Filter
 
 	public double[] phase( int len )
 	{
-		final double buf[] = new double[len];
+		final double[] buf = new double[len];
 
 		for ( int i = 0; i < len; i++ )
 		{
@@ -370,7 +370,7 @@ public class Filter
 
 	public double[] groupdelay( int len )
 	{
-		final double buf[] = new double[len];
+		final double[] buf = new double[len];
 
 		for ( int i = 0; i < len; i++ )
 		{
@@ -403,8 +403,8 @@ public class Filter
 
 	public double[] impulseresponse( int len )
 	{
-		final double buf[] = new double[len];
-		final Complex cbuf[] = new Complex[len];
+		final double[] buf = new double[len];
+		final Complex[] cbuf = new Complex[len];
 
 		cbuf[ 0 ] = new Complex( 1, 0 );
 		for ( int i = 1; i < cbuf.length; i++ )
@@ -417,7 +417,7 @@ public class Filter
 		{
 			Complex z = zerosIterator.next();
 
-			for ( int j = cbuf.length - 1; j > 0; j-- )
+			for ( int j = len - 1; j > 0; j-- )
 			{
 				cbuf[ j ] = cbuf[ j ].add( Complex.mult( z, cbuf[ j - 1 ] ) );
 			}
@@ -437,7 +437,7 @@ public class Filter
 		{
 			Complex z = polesIterator.next();
 
-			for ( int j = 1; j < cbuf.length; j++ )
+			for ( int j = 1; j < len; j++ )
 			{
 				cbuf[ j ] = cbuf[ j ].add( Complex.mult( z, cbuf[ j - 1 ] ) );
 			}
